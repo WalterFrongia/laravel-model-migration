@@ -16,8 +16,8 @@ class CreateTravelTable extends Migration
         Schema::create('travel', function (Blueprint $table) {
             $table->id();
             $table->string('place',100);
-            $table->float('price', 5, 2, false);
-            $table->boolean('is_available')->default(1);
+            $table->float('price', 5, 2);
+            $table->boolean('is_available')->default(1);//0 false 1 true
             $table->timestamps();
         });
     }
